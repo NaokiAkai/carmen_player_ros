@@ -1,3 +1,7 @@
+# ROS
+build
+devel
+
 # Prerequisites
 *.d
 

@@ -1,0 +1,69 @@
+<!-- carmen_player_ros.launch -->
+<launch >
+    <arg name="log_file" default="/home/akai/2d_dataset/intel.log" />
+
+    <arg name="map_frame" default="map" />
+    <arg name="odom_frame" default="odom" />
+    <arg name="base_link_frame" default="base_link" />
+    <arg name="flaser_frame" default="laser" />
+    <arg name="rlaser_frame" default="rlaser" />
+    <arg name="raw_laser1_frame" default="raw_laser1" />
+    <arg name="raw_laser2_frame" default="raw_laser2" />
+    <arg name="raw_laser3_frame" default="raw_laser3" />
+    <arg name="raw_laser4_frame" default="raw_laser4" />
+    <arg name="robot_laser0_frame" default="robot_laser0" />
+    <arg name="robot_laser1_frame" default="robot_laser1" />
+
+    <arg name="odom_name" default="/odom" />
+    <arg name="flaser_name" default="/scan" />
+    <arg name="rlaser_name" default="/rscan" />
+    <arg name="raw_laser1_name" default="/raw_scan1" />
+    <arg name="raw_laser2_name" default="/raw_scan2" />
+    <arg name="raw_laser3_name" default="/raw_scan3" />
+    <arg name="raw_laser4_name" default="/raw_scan4" />
+    <arg name="robot_laser0_name" default="/robot_scan0" />
+    <arg name="robot_laser1_name" default="/robot_scan1" />
+    <arg name="laser_pose_name" default="/laser_pose" />
+    <arg name="robot_pose_name" default="/robot_pose" />
+
+    <arg name="broadcast_base_link_to_Laser_tf" default="true" />
+    <arg name="broadcast_odom_tf" default="true" />
+    <arg name="offset_pose" default="true" />
+
+    <arg name="skip_time" default="25.0" />
+    <arg name="finish_time" default="-360.0" />
+
+
+    <node name="carmen_player_ros" pkg="carmen_player_ros" type="carmen_player_ros" args="$(arg log_file)" output="screen" >
+        <param name="map_frame" value="$(arg map_frame)" type="string" />
+        <param name="odom_frame" value="$(arg odom_frame)" type="string" />
+        <param name="base_link_frame" value="$(arg base_link_frame)" type="string" />
+        <param name="flaser_frame" value="$(arg flaser_frame)" type="string" />
+        <param name="rlaser_frame" value="$(arg rlaser_frame)" type="string" />
+        <param name="raw_laser1_frame" value="$(arg raw_laser1_frame)" type="string" />
+        <param name="raw_laser2_frame" value="$(arg raw_laser2_frame)" type="string" />
+        <param name="raw_laser3_frame" value="$(arg raw_laser3_frame)" type="string" />
+        <param name="raw_laser4_frame" value="$(arg raw_laser4_frame)" type="string" />
+        <param name="robot_laser0_frame" value="$(arg robot_laser0_frame)" type="string" />
+        <param name="robot_laser1_frame" value="$(arg robot_laser1_frame)" type="string" />
+
+        <param name="odom_name" value="$(arg odom_name)" type="string" />
+        <param name="flaser_name" value="$(arg flaser_name)" type="string" />
+        <param name="rlaser_name" value="$(arg rlaser_name)" type="string" />
+        <param name="raw_laser1_name" value="$(arg raw_laser1_name)" type="string" />
+        <param name="raw_laser2_name" value="$(arg raw_laser2_name)" type="string" />
+        <param name="raw_laser3_name" value="$(arg raw_laser3_name)" type="string" />
+        <param name="raw_laser4_name" value="$(arg raw_laser4_name)" type="string" />
+        <param name="robot_laser0_name" value="$(arg robot_laser0_name)" type="string" />
+        <param name="robot_laser1_name" value="$(arg robot_laser1_name)" type="string" />
+        <param name="laser_pose_name" value="$(arg laser_pose_name)" type="string" />
+        <param name="robot_pose_name" value="$(arg robot_pose_name)" type="string" />
+
+        <param name="broadcast_base_link_to_Laser_tf" value="$(arg broadcast_base_link_to_Laser_tf)" type="bool" />
+        <param name="broadcast_odom_tf" value="$(arg broadcast_odom_tf)" type="bool" />
+        <param name="offset_pose" value="$(arg offset_pose)" type="bool" />
+
+        <param name="skip_time" value="$(arg skip_time)" type="double" />
+        <param name="finish_time" value="$(arg finish_time)" type="double" />
+    </node >
+</launch >
