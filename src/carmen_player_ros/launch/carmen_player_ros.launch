@@ -1,4 +1,9 @@
-<!-- carmen_player_ros.launch -->
+<!-- 
+    carmen_player_ros.launch
+    Copyright (C) 2022 Naoki Akai
+    @author Naoki Akai
+ -->
+
 <launch >
     <arg name="log_file" default="/home/akai/2d_dataset/intel.log" />
 
@@ -30,8 +35,8 @@
     <arg name="broadcast_odom_tf" default="true" />
     <arg name="offset_pose" default="true" />
 
-    <arg name="skip_time" default="25.0" />
-    <arg name="finish_time" default="-360.0" />
+    <arg name="skip_time" default="0.0" />
+    <arg name="finish_time" default="-1.0" /> <!-- If minus, this is ignored -->
 
 
     <node name="carmen_player_ros" pkg="carmen_player_ros" type="carmen_player_ros" args="$(arg log_file)" output="screen" >

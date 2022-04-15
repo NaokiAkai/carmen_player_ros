@@ -1,12 +1,10 @@
 # carmen_player_ros
 
-carmen_player_ros is a player of CARMEN Logfiles to use them in ROS.
+carmen_player_ros is a player of CARMEN log files to use them in ROS. You can easily test 2D LiDAR-based SLAM and localization on ROS with this player.
 
 
 
-CARMEN Logfiles are datasets for 2D laser scanner.
-
-see [Pre-2014 Robotics 2D-Laser Datasets](https://www.ipb.uni-bonn.de/datasets/)
+CARMEN log files are datasets for 2D laser scanner. See for more details [Pre-2014 Robotics 2D-Laser Datasets](https://www.ipb.uni-bonn.de/datasets/).
 
 
 
